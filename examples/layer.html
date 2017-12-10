@@ -34,13 +34,18 @@
 			testA.style.backgroundColor = testA.style.backgroundColor ? '' : 'YellowGreen';
 		}, false);
 
+		// testB.addEventListener('touchstart',function(event){
+		// 	alert("layer.html touchstart");
+		// });
 		testB.addEventListener('touchend', function(event) {
+			alert("layer.html touchEnd")
 			teTime = Date.now();
 			document.getElementById('te-time').value = teTime;
 			document.getElementById('d-time').value = cTime - teTime;
 		}, false);
 
 		testB.addEventListener('click', function(event) {
+			alert("into click")
 			cTime = Date.now();
 			document.getElementById('c-time').value = cTime;
 			testB.style.backgroundColor = testB.style.backgroundColor ? '' : 'YellowGreen';
